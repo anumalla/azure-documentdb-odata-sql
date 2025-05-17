@@ -11,15 +11,20 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace azure_documentdb_odata_sql_tests
 {
     [TestClass]
+    /// <summary>
+    ///     Demonstrates how different OData queries are translated into
+    ///     DocumentDB SQL statements. Each test verifies a specific
+    ///     translation scenario.
+    /// </summary>
     public class ODataToSqlSamples
     {
         /// <summary>
-        /// 
+        ///     Query context shared by all tests.
         /// </summary>
         private static ODataQueryContext oDataQueryContext { get; set; }
 
         /// <summary>
-        /// 
+        ///     HTTP request used to build <see cref="ODataQueryOptions"/>.
         /// </summary>
         private static HttpRequestMessage httpRequestMessage { get; set; }
 
